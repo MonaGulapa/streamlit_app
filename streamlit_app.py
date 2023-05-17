@@ -36,8 +36,8 @@ try:
     # take the json version of the response and normalize it
     fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
     streamlit.dataframe(fruityvice_normalized)
- except URLError as e:
-    streamlit.error()
+except URLError as e:
+  streamlit.error()
     
 # fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 # streamlit.text(fruityvice_response.json()) # just writes data to the screen
